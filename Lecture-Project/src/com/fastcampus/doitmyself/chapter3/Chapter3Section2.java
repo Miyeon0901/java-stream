@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class Chapter3Section2 {
 
     public static void main(String[] args) {
-        Function<Integer, Integer> myAdder1 = (Integer x) -> {
+        Function<Integer, Integer> myAdder1 = (Integer x) -> { // BinaryOperator<Integer>, IntBinaryOperator
             return x + 10;
         }; // Lambda Expression 사용. anonymous function.
 
