@@ -3,7 +3,7 @@ package com.fastcampus.doitmyself.chapter6.model;
 import java.math.BigDecimal;
 
 public class OrderLine {
-    private Long id;
+    private long id;
     private OrderLineType type;
     private long productId;
     private int quantity;
@@ -14,11 +14,11 @@ public class OrderLine {
         DISCOUNT
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public OrderLine setId(Long id) {
+    public OrderLine setId(long id) {
         this.id = id;
         return this;
     }

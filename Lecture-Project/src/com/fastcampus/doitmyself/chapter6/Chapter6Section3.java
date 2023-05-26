@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 
 public class Chapter6Section3 {
     public static void main(String[] args) {
+        // Map: 스트림 안의 데이터에 어떠한 처리를 해서 다른 형태로 변형
         List<Integer> numberList = Arrays.asList(3, 6, -4);
 //        Stream<Integer> numberStream = numberList.stream();
 //        Stream<Integer> numberStreamX2 = numberStream.map(x -> x * 2);
