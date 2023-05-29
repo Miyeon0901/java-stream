@@ -50,11 +50,13 @@ public class Chapter8Section8 {
         Map<Boolean, List<User>> userPartitions = users.stream()
                 .collect(Collectors.partitioningBy(user -> user.getFriendUserIds().size() > 5));
         EmailService emailService = new EmailService();
-        for (User user: userPartitions.get(true)) {
-            emailService.sendPlayWithFriendsEmail(user);
-        }
-        for (User user: userPartitions.get(false)) {
-            emailService.sendMakeMoreFriendsEmail(user);
-        }
+        userPartitions.get(true).forEach(emailService::sendPlayWithFriendsEmail);
+        userPartitions.get(false).forEach(emailService::sendMakeMoreFriendsEmail);
+//        for (User user: userPartitions.get(true)) {
+//            emailService.sendPlayWithFriendsEmail(user);
+//        }
+//        for (User user: userPartitions.get(false)) {
+//            emailService.sendMakeMoreFriendsEmail(user);
+//        }
     }
 }
